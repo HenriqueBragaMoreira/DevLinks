@@ -57,6 +57,13 @@ body * {
 #profile p {
     font-weight: 500;
     line-height: 24px;
+    margin: 0px 0px 24px 0px;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
 }
 
 #switch button {
@@ -66,6 +73,27 @@ body * {
     border: 0;
     border-radius: 50%;
     background-image: var(--switch-bg-url);
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
 }
 
 ul {
